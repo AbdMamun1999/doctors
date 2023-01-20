@@ -8,6 +8,8 @@ import styles from  '../../styles/Navbar.module.css'
 const Navbar = () => {
 
   const [fix, setFix] = useState(false)
+
+  /* responsive navbar menu icon setup start*/
   const [menuIcon,setMenuIcon] = useState(false)
   function setFixed(){
     if(window.scrollY >= 102){
@@ -15,16 +17,15 @@ const Navbar = () => {
     }else{
       setFix(false)
     }
-
   }
+ /* responsive navbar menu icon setup ends*/
 
 
-
+  /* onscroll navbar design start */
   useEffect(function mount() {
     function onScroll() {
       console.log("scroll!");
     }
-
     window.addEventListener("scroll", setFixed);
 
     return function unMount() {
@@ -32,12 +33,22 @@ const Navbar = () => {
     };
   });
 
-
   const menuHandler=(e)=>{
     setMenuIcon(!menuIcon)
-    
   }
+   /* onscroll navbar design ends */
   
+   /* login button onclick handler start*/
+   const loginHandler=()=>{
+    console.log('clicked')
+   }
+
+ 
+  
+ 
+ 
+   /* login button onclick handler ends*/
+
   return (
     <div className={styles.rooNav}>
       <div  className={ fix ? [styles.navbarContainer, styles.fixed].join(" "):styles.navbarContainer}>
@@ -62,9 +73,9 @@ const Navbar = () => {
             <li><a href='#'>Contact us</a></li>
           </ul>
         </div>
-        <button >Login</button>
+        <button onClick={loginHandler}>Login</button>
       </div>
-      <div className={styles.icon}><Image onClick={menuHandler} src={menuIcon ? menu : closeMenu} alt='No Image' width={40} height={40}/></div>
+      <div className={styles.icon}><Image onClick={menuHandler} src={menuIcon ? closeMenu : menu} alt='No Image' width={40} height={40}/></div>
       </div>
       <div className={menuIcon ? styles.dropdown : styles.showDropDown}>
         <div >
@@ -75,7 +86,9 @@ const Navbar = () => {
              <a href='#'>Contact us</a>
             </ul>
         </div>
-        <div><button>Login</button></div>
+        <div>
+            <button onClick={loginHandler}>Login</button>
+        </div>
       </div>
     </div>
   )
