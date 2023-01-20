@@ -15,7 +15,6 @@
     left: 0px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
-
 .navbarContainer.fixed{
     background-color: blueviolet;
     transition: .3s ease-in-out;
@@ -25,14 +24,12 @@
     color: white;
     
 }
-
 .icon{
     padding-right: 15px;
 }
 .icon > img{
     cursor: pointer;
 }
-
 .logo{
     display: flex;
     flex-direction: row;
@@ -40,7 +37,6 @@
     justify-content: flex-start;
     padding-left: 10px;
 }
-
 .logo > span{
     display: flex;
     flex-direction: row;
@@ -98,6 +94,10 @@
     background-color:magenta;
     color: white;
 }
+
+
+
+
 
 /* .dropdown{
     position: fixed;
@@ -235,6 +235,8 @@
 } */
 
 
+/*Media query start from here*/
+
     @media screen and (min-width: 400px) {
         .navigation{
             display: none;
@@ -245,7 +247,6 @@
         flex-direction: column;
         }
     }
-  
 
     @media screen and (min-width: 600px) {
     
@@ -253,7 +254,6 @@
     @media screen and (min-width: 768px) {
     
   }
-
  
   @media screen and (min-width: 830px) {
     .navigation{
@@ -270,3 +270,5 @@
   @media screen and (min-width: 992px) {
    
   }
+
+  /*media query ends here*/

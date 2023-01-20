@@ -12,7 +12,7 @@ export default function Home() {
         <Button variant="contained">Contained</Button>
         <Button variant="outlined">Outlined</Button>
       </Stack>
-
+    
   
     </>
   )
